@@ -41,6 +41,10 @@
       FROM world
      WHERE capital LIKE concat ('%' , name, '%')
 
-14. ?
+14. SELECT capital, name 
+      FROM world
+     WHERE capital LIKE concat(name, '%') AND capital <> name
 
-15. ?
+15. SELECT name, REPLACE(capital, name, '')
+      FROM world
+     WHERE capital LIKE concat(name, '%') AND capital <> name
